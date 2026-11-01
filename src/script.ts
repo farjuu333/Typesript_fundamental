@@ -47,12 +47,18 @@ const logUserAction = (...args:[name:string,age:number,isActive:boolean])=>{
 logUserAction("farjana",24,false)
 
 // object type,type alias and interface
+type Address ={
+        streetName:string;
+        holdingNumber:number;
+    }
+
 type Tuser = {
     name:string;
     age:number;
     isActive:boolean;
     action:()=>void;
     badges:string[];
+    address:Address;
 };
 // interface
 interface IUser {
@@ -69,4 +75,8 @@ const user:Tuser={
     isActive:true,
     action:()=>console.log("hello"),
     badges:["abe","def"],
+    address:{
+        holdingNumber:123,
+        streetName:"abcd"
+    }
 }
